@@ -1,0 +1,28 @@
+[
+    {
+      "date": "2025-02-01",
+      "quantity": 2,
+      "price": 50
+    },
+    {
+      "date": "2025-02-05",
+      "quantity": 1,
+      "price": 30
+    },
+    {
+      "date": "2025-02-10",
+      "quantity": 3,
+      "price": 60
+    },
+    {
+      "date": "2025-02-15",
+      "quantity": 5,
+      "price": 120
+    },
+    {
+      "date": "2025-02-20",
+      "quantity": 2,
+      "price": 90
+    }
+  ]
+  
