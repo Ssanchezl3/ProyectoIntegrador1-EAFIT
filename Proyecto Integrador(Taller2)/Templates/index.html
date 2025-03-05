@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial de Compras y Pujas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Historial de Compras</h1>
+        {% if purchases %}
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Cantidad</th>
+                    <th>Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for purchase in purchases %}
+                <tr>
+                    <td>{{ purchase.date }}</td>
+                    <td>{{ purchase.quantity }}</td>
+                    <td>${{ purchase.price }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <p>No hay compras registradas.</p>
+        {% endif %}
+
+        <h1>Historial de Pujas</h1>
+        {% if bids %}
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Subasta</th>
+                    <th>Oferta</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for bid in bids %}
+                <tr>
+                    <td>{{ bid.auctionId }}</td>
+                    <td>${{ bid.amount }}</td>
+                    <td>{{ bid.status }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <p>No hay pujas registradas.</p>
+        {% endif %}
+
+        <a href="/admin">Administrar Ofertas</a>
+    </div>
+</body>
+</html>

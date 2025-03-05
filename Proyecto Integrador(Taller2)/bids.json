@@ -1,0 +1,22 @@
+[
+  {
+      "auctionId": "AUC123",
+      "amount": 100.00,
+      "status": "Ganada"
+  },
+  {
+      "auctionId": "AUC456",
+      "amount": 120.00,
+      "status": "Perdida"
+  },
+  {
+      "auctionId": "AUC789",
+      "amount": 150.00,
+      "status": "Pendiente"
+  },
+  {
+      "auctionId": "AUC101",
+      "amount": 90.00,
+      "status": "Pendiente"
+  }
+]
